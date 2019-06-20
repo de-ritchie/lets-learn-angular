@@ -12,3 +12,7 @@ Angular Commands
     $ ng g c server
     To avoid spec testing file => $ ng g c server --spec false
     To create a component inside a particular folder then => $ ng g c server/server-list
+*   Create Directives
+    $ ng generate directive any-name
+    or
+    $ ng g d any-name

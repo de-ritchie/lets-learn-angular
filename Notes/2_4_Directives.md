@@ -22,8 +22,14 @@ Inbuilt directives
 -   *ngFor
     -   <app-server *ngFor = 'let server of servers; let i = index'></app-server>
     -   Iterate through each and every element in an array and assign each to dynamic server variable.
-    -   To get index of each iteration, index key word is assigned to a temporary variable
-
+    -   To get index of each iteration, index key word is assigned to a temporary variable.
+-   ngSwitch & *ngSwitchCase
+    -   <div [ngSwitch] = "value">
+                <p *ngSwitchCase = "1">1</p>
+                <p *ngSwitchCase = "2">2</p>
+                <p *ngSwitchCase = "3">3</p>
+                <p *ngSwitchDefault>0</p>
+        </div>
 Note
 -   Unless structural directives, attribute directives don't add or remove elements.
 -   They change the element they were placed on.
