@@ -17,10 +17,13 @@ Custom directives
 
 import { Directive, ElementRef } from '@angular/core';
 
+```
 @Directive({
     selector: '[appBasic]'
 })
+```
 
+```
 export class BasicDirective implements onInit{
     
     constructor(private elementRef: ElementRef){}
@@ -28,6 +31,7 @@ export class BasicDirective implements onInit{
         this.elementRef.nativeElement.style.backgroundColor = 'green';
     }
 }
+```
 -   Attribute directive
     -   Create any-name.directive.ts
     -   It consits of decorator @Directive with configuration and a class.
@@ -35,12 +39,13 @@ export class BasicDirective implements onInit{
         -   selector
             -   A unique selector.
             -   Camel case is used.
-            -   To select by element => selector: "appBasic"
-            -   To select by attribute => selector: "[appBasic]"
+            -   To select by element => ```selector: "appBasic"```
+            -   To select by attribute => ```selector: "[appBasic]"```
     -   We also need to know about the current element if an attribute selector is used.
     -   Angular allows to get this by injecting the element in the constructor of the class.
     -   Just like components we've to inform Angular that we've a new directive.
     -   In app.module.ts
+        ```
         import { BasicDirective } from '...';
         @NgModule({
             declarations: [
@@ -50,9 +55,12 @@ export class BasicDirective implements onInit{
             ],
             ...
         })
+        ```
     -   Usage in HTML, The paragraph tag alone will get highlighted in green
+        ```
         <div>
             ...
             <p appBasic>...</p>
             ...
         </div>
+        ```

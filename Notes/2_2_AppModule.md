@@ -1,5 +1,6 @@
 App Module
 
+```
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -18,10 +19,11 @@ import { ServerComponent } from './server/server.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+```
 
 -   Angular uses components to build pages whereas uses modules to bundle different pieces of components of your app into packages.
 -   Used to split app into multiple modules for a larger project.
--   It is similar to component with a typescript class. But has a decorator '@NgModule' which imported from angular core
+-   It is similar to component with a typescript class. But has a decorator ```'@NgModule'``` which imported from angular core
 -   Properties
     -   bootstrap
         -   It is responsible for telling angular which component it has to be aware of when the whole application starts.

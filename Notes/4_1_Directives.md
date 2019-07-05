@@ -3,8 +3,9 @@
 -   The better way to do is use Renderer.
 
 Create a directive by command 
-    $ ng g d any-name
+    ```$ ng g d any-name```
 
+```
 import { Directive, Renderer2, OnInit, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
@@ -27,6 +28,7 @@ export class AppAnyName implements onInit{
         this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'blue', false);
     }
 }
+```
 
 -   In this.renderer.setStyle parameters
     -   Element reference

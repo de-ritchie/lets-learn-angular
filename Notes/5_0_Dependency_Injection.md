@@ -7,11 +7,13 @@ What is a Service ?
 
 In Service
 
+```
 export class LoggingService{
     logStatusChange(status: string){
         console.log('Server status is changed, new server status: '+ status);
     }
 }
+```
 
 How to introduce service into Components ?
 
@@ -25,6 +27,7 @@ How to introduce service into Components ?
 
 In Component
 
+```
 import { LoggingService } from ' ... ';
 @Component({ 
     ...
@@ -39,6 +42,7 @@ export class AccComponent{
         ...
     }
 }
+```
 
 Hierarchical Injector
 -   If we provide a service in some places in an app like Component1, the angular service knows to create an instance of service to this and all it child components.
@@ -62,6 +66,7 @@ Injecting Services into Services
 
 In a Service
 
+```
 import { Injectable } from '@angular/core';
 import { LoggingService } from ' ... ';
 
@@ -70,3 +75,4 @@ export class AccountService{
 
     constructor(private loggingService: LoggingService){}
 }
+```
